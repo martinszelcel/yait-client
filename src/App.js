@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "tailwindcss/tailwind.css"
-import TestView from './TestView';
+import AuthTestView from './AuthTestView';
+import IssueTestView from './IssueTestView';
 
 const App = () => {
+    const [accessToken, setAccessToken] = useState(
+        sessionStorage.getItem('accessToken') || null
+    );
+
     return (
-        <TestView />
+        <div className="bg-gray-700 min-h-screen">
+            <AuthTestView accessToken={accessToken} setAccessToken={setAccessToken}/>
+            <IssueTestView accessToken={accessToken}/>
+        </div>
     );
 }
 

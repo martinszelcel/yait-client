@@ -8,16 +8,13 @@ const MyDevicesModal = ({open, onClose, accessToken}) => {
       axios.defaults.headers.common = {'Authorization': `Bearer ${accessToken}`}
 
       axios.get('/api/devices').then(response => {
-        console.log(response.data);
         setDevices(response.data);
       });
     });
 
-    console.log(devices);
-
     return (
         <Modal open={open}>
-          <div className="bg-white px-4 pt-5 pb-4">
+          <div className="bg-white text-gray-800 px-4 pt-5 pb-4">
             <div className="mt-3 text-center">
               <h3 className="text-xl font-bold text-gray-900">
                 My devices
