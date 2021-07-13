@@ -30,7 +30,7 @@ const MyDevicesModal = ({open, onClose, accessToken}) => {
                     </thead>
                     <tbody>
                       {devices ? devices.map(device => (
-                          <tr>
+                          <tr key={device._id}>
                             <td className="border border-green-600 p-4">{device.userAgent}</td>
                             <td className="border border-green-600 p-4">{device.ip}</td>
                             <td className="border border-green-600 p-4">{device.lastUsed}</td>

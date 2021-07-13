@@ -48,9 +48,10 @@ class IssueTestView extends React.Component {
                     <hr className="my-4"/>
 
                     {this.state.issues.map(issue => (
-                        <div>
-                            <h3 className="text-xl">{issue.title}</h3>
-                            <span>{issue.description}</span>
+                        <div key={issue._id}>
+                            <h3 className="text-xl">Title: {issue.title}</h3>
+                            <div>Description: {issue.description}</div>
+                            <div>Project: {issue.project.name}</div>
                         </div>
                     ))}
                 </div>

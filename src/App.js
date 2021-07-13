@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "tailwindcss/tailwind.css"
 import AuthTestView from './AuthTestView';
 import IssueTestView from './IssueTestView';
+import ProjectTestView from './ProjectTestView';
 
 const App = () => {
     const [accessToken, setAccessToken] = useState(
@@ -12,6 +13,7 @@ const App = () => {
         <div className="bg-gray-700 min-h-screen">
             <AuthTestView accessToken={accessToken} setAccessToken={setAccessToken}/>
             <IssueTestView accessToken={accessToken}/>
+            <ProjectTestView accessToken={accessToken}/>
         </div>
     );
 }
