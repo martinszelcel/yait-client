@@ -5,6 +5,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
+    publicPath: '/'
   },
   resolve: {
     modules: [path.join(__dirname, 'src'), 'node_modules'],
@@ -43,15 +44,16 @@ module.exports = {
     }),
   ],
   devServer: {
-    inline:true,
+    //inline:true,
     host: "0.0.0.0",
     port: 3000,
+    historyApiFallback: true,
     proxy: {
       '/api': 'http://server:5000'
     },
-    watchOptions: {
-        aggregateTimeout: 500, // delay before reloading
-        poll: 1000 // enable polling since fsevents are not supported in docker
-    }
+    // watchOptions: {
+    //     aggregateTimeout: 500, // delay before reloading
+    //     poll: 1000 // enable polling since fsevents are not supported in docker
+    // }
   },
 };

@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from './elements/Button';
+import Button from './components/Button';
 import axios from 'axios'
-import CreateProjectModal from './projects/CreateProjectModal';
+import CreateProjectModal from './components/modals/projects/CreateProjectModal';
 
 class ProjectTestView extends React.Component {
     state = {

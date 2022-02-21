@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Button from './elements/Button';
-import RegisterModal from './auth/RegisterModal';
-import LoginModal from './auth/LoginModal';
-import MyDevicesModal from './auth/MyDevicesModal';
+import Button from './components/Button';
+import RegisterModal from './components/modals/auth/RegisterModal';
+import LoginModal from './components/modals/auth/LoginModal';
+import MyDevicesModal from './components/modals/auth/MyDevicesModal';
 import axios from 'axios';
 
 const AuthTestView = ({accessToken, setAccessToken}) => {
@@ -72,7 +72,7 @@ const AuthTestView = ({accessToken, setAccessToken}) => {
 
     return (
         <div className="flex items-center justify-center">
-            <div className="border shadow-lg rounded-lg p-8 text-white shadow-xl text-center m-8 bg-gray-500 border-gray-600">
+            <div className="border rounded-lg p-8 text-white shadow-xl text-center m-8 bg-gray-500 border-gray-600">
                 <h1 className="text-2xl mb-4">Auth Test View</h1>
 
                 <div className="flex gap-5 justify-center py-4">

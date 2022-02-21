@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import Modal from '../elements/Modal';
+import Modal from '../../Modal';
 import axios from 'axios';
 
 const MyDevicesModal = ({open, onClose, accessToken}) => {

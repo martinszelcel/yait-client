@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from './elements/Button';
+import Button from './components/Button';
 import axios from 'axios'
-import CreateIssueModal from './issues/CreateIssueModal';
+import CreateIssueModal from './components/modals/issues/CreateIssueModal';
 
 class IssueTestView extends React.Component {
     state = {
